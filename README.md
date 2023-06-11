@@ -75,4 +75,19 @@ We thank the developers of [kafka-connector-iceberg-sink](https://github.com/get
 
 We also thank [10X Banking](https://www.10xbanking.com/) for letting us open source the code.
 
+# Misc prerequisites 
+
+## Build instructions
+./gradlew --no-daemon clean build distZip -x integrationTest
+
+## Kafka connect setup
+Unzip the plugin once you built or fetched it /usr/lib/kafka/kafka_2.12-3.4.0/kafka-connect-iceberg-sink-0.0.4 
+Kafka connect should needs to point out the plugin like this: 
+
+plugins.path=/usr/lib/kafka/kafka_2.12-3.4.0/kafka-connect-iceberg-sink-0.0.4
+
+NOTE1: point out the exploded ROOT directory of the plugin and NOT its lib/ directory , that would create many small isolated classloaders. 
+NOTE2: Correct configured allt the depedent jars get picked upp. no need to fetch individual librares and put in global kafka libs directory.
+
+
 
