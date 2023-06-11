@@ -4,7 +4,7 @@ buildscript {
     hadoopVersion                 = '3.3.5'
     kafkaVersion                  = '3.4.0'
     kafkaSchemaRegistryVersion    = '7.4.0'
-    kafkaConnectStorageVersion    = '11.2.0'
+    kafkaConnectStorageVersion    = '11.1.2'
     awsSdkVersion                 = '2.20.18'
     slf4jVersion                  = '2.0.7'
     logbackVersion                = '1.4.5'
